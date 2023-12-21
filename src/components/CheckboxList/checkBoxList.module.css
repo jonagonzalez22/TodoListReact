@@ -1,0 +1,9 @@
+.checkBoxListContainer > ul {
+	background-color: rgba(252, 243, 207, 0.9);
+	margin: auto;
+	border-radius: 5px;
+}
+
+.checkBoxListContainer > ul > li > div:nth-child(2) button {
+	outline: none;
+}

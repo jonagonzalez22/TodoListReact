@@ -1,0 +1,25 @@
+.todolist {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.addTaskContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-items: center;
+}
+
+.addTaskContainer > div > div {
+	width: 360px;
+}
+
+.addTaskContainer > button {
+	width: 360px;
+}
+
+.alertContainer {
+	margin: auto;
+	width: 360px;
+}
