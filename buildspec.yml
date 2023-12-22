@@ -6,11 +6,11 @@ phases:
       nodejs: 10
     commands:
       - npm install -g yarn
-      - yarn install
+      - npm install
 
   build:
     commands:
-      - yarn build
+      - npm run build
 
 artifacts:
   files:
