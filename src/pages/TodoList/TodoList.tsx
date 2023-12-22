@@ -68,7 +68,7 @@ const TodoList = () => {
 				/>
 			) : (
 				<div className={styles.alertContainer}>
-					<Alert severity='info'>No hay lista de tareas</Alert>
+					<Alert severity='info'>No hay lista de tareas.</Alert>
 				</div>
 			)}
 		</article>
