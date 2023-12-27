@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - npm run build
-      - aws s3 sync dist/ s3://todo-list-prueba
+      - aws s3 sync dist/ s3://todo-list-pruebas
 
 artifacts:
   files:
