@@ -10,6 +10,7 @@ const TodoList = () => {
 	const [tasks, setTasks] = useState<string[]>([]);
 	const [newTaskInputValue, setNewTaskInputValue] = useState<string>('');
 	const [taskSelected, setTaskSelected] = useState<number>(-1);
+	const [buttonTitle, setButtonTitle] = useState('Agregar');
 
 	const addNewTasks = (): void => {
 		if (newTaskInputValue.trim() === '') return;
@@ -18,6 +19,7 @@ const TodoList = () => {
 		if (taskSelected > -1) {
 			updatedTasks[taskSelected] = newTaskInputValue;
 			setTaskSelected(-1);
+			setButtonTitle('Agregar');
 		} else {
 			updatedTasks.push(newTaskInputValue);
 		}
@@ -37,6 +39,7 @@ const TodoList = () => {
 	const selectTasdToUpdate = (index: number): void => {
 		setNewTaskInputValue(tasks[index]);
 		setTaskSelected(index);
+		setButtonTitle('Guardar cambios');
 	};
 
 	const handleChangeNewTaskInput = (
@@ -56,7 +59,7 @@ const TodoList = () => {
 					variant='contained'
 					startIcon={<AddCircleOutlineIcon />}
 					onClick={addNewTasks}>
-					Agregar
+					{buttonTitle}
 				</Button>
 			</section>
 
